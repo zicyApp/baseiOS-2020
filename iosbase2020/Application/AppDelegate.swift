@@ -10,11 +10,27 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
+    private static let mainRouter = AppRouteCreator().createRoute(forApp: AppDelegate.application)
+    
+    private static let application: AppDependencyContainerInterface = {
+        let ctx: AppCreator.AppCreationContext = AppCreator.AppCreationContext.appWithMockProxy
+        return AppCreator().createApp(forContext: ctx)
+    }()
 
-
+    struct AppConfigs {
+        // swiftlint:disable force_cast force_unwrapping
+        static let CONFIG_API_URL = Bundle.main.infoDictionary!["CONFIG_API_URL"] as! String //fatal, needed
+        // static let CONFIG_API_MOCK = Bundle.main.infoDictionary!["CONFIG_API_MOCK"] as! Bool //fatal, needed
+        // swiftlint:enable force_cast force_unwrapping
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = AppDelegate.mainRouter.createRootUI()
+        TargetTheme.setup()
+        
         return true
     }
 
