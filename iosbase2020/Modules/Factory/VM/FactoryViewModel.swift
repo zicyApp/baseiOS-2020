@@ -70,4 +70,8 @@ class FactoryViewModel {
             }
         }
     }
+    
+    func showDetailsView(factory: Factory?) {
+        self.router.showDetailsView(factory: factory)
+    }
 }

@@ -9,5 +9,9 @@
 import Foundation
 
 open class i18Interface {
-    static var factoriesTitle = "FactoryTitle"
+    static var factoriesTitle = "FactoryTitlse"
+    static var factoryNoResult = "FactoryNoResult"
+    static var factoryAddress = "FactoryAddress"
+    static var factoryCountry = "FactoryCountry"
+    static var factoryDivision = "FactoryDivision"
 }

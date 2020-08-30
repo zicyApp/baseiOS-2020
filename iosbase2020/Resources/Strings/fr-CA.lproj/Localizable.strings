@@ -7,3 +7,7 @@
 */
 
 "FactoryTitle" = "Usines";
+"FactoryNoResult" = "Aucun résultat";
+"FactoryAddress" = "Adresse";
+"FactoryCountry" = "Pays";
+"FactoryDivision" = "Division";

@@ -31,11 +31,11 @@ enum LabelVariation: String, Variation {
     static var variations: [LabelVariation: VariationBlock] = [
         .titleRegular: { label in
             label.font = FontTheme.regular(label.font.pointSize)
-            label.textColor = ColorTheme.Primary.title.dynamicColor()
+            label.textColor = ColorTheme.Primary.tint.dynamicColor()
         },
         .titleBold: { label in
             label.font = FontTheme.bold(label.font.pointSize)
-            label.textColor = ColorTheme.Primary.title.dynamicColor()
+            label.textColor = ColorTheme.Primary.tint.dynamicColor()
         },
         .headerTitle: { label in
             label.font = FontTheme.bold(label.font.pointSize)

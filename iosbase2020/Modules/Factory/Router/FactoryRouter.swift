@@ -9,14 +9,14 @@
 import UIKit
 
 protocol FactoryRouterInterface: class {
-    func showDetailsView()
+    func showDetailsView(factory: Factory?)
 }
 
 class FactoryRouter: FactoryRouterInterface {
     
     private struct Const {
         static let factoryStoryboard = "Factory"
-        static let factoryViewController = "FactoryViewController"
+        static let factoryViewController = "FactoryDetailsViewController"
     }
     
     private weak var presented: UIViewController?
@@ -29,7 +29,13 @@ class FactoryRouter: FactoryRouterInterface {
         self.activities = activities
     }
     
-    func showDetailsView() {
-        
+    func showDetailsView(factory: Factory?) {
+        let storyboard = UIStoryboard(name: Const.factoryStoryboard, bundle: Bundle.main)
+        let vc = storyboard.instantiateViewController(withIdentifier: Const.factoryViewController) as! FactoryDetailsViewController
+        let router = FactoryDetailsRouter(presented: vc, app: self.app, activities: self.activities)
+        let vm = FactoryDetailsViewModel(delegate: vc, router: router, app: self.app)
+        vc.set(viewModel: vm)
+        vc.factory = factory
+        self.presented?.navigationController?.pushViewController(vc, animated: true)
     }
 }

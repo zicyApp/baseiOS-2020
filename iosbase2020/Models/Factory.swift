@@ -13,7 +13,7 @@ struct Factory: Codable {
     var token: String?
     
     var id: Int? = nil
-    var addres: String? = nil
+    var address: String? = nil
     var country: String? = nil
     var division: String? = nil
     var name: String? = nil

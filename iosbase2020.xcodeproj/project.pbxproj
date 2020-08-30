@@ -61,6 +61,9 @@
 		42F1CE3824FC2F0A001E5F1F /* FactoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3724FC2F0A001E5F1F /* FactoryCell.swift */; };
 		42F1CE3B24FC2F3F001E5F1F /* SharedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3A24FC2F3F001E5F1F /* SharedTableViewCell.swift */; };
 		42F1CE3D24FC2FC3001E5F1F /* FactoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3C24FC2FC3001E5F1F /* FactoryService.swift */; };
+		42F1CE3F24FC3D54001E5F1F /* FactoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3E24FC3D54001E5F1F /* FactoryDetailsViewController.swift */; };
+		42F1CE4124FC3D9F001E5F1F /* FactoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE4024FC3D9F001E5F1F /* FactoryDetailsViewModel.swift */; };
+		42F1CE4324FC3E56001E5F1F /* FactoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE4224FC3E56001E5F1F /* FactoryDetailsRouter.swift */; };
 		5ED09F9D2A1EBDE019845039 /* Pods_iosbase2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D667809C5D5AEE8185A01 /* Pods_iosbase2020.framework */; };
 		69D50B8EF79921EC3220D72C /* Pods_iosbase2020_iosbase2020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37656DAA95031EE31BFB1BB1 /* Pods_iosbase2020_iosbase2020UITests.framework */; };
 		9AB7D047A0C3965E66EAB938 /* Pods_iosbase2020_iosbase2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D51258131E972B409F8B457 /* Pods_iosbase2020_iosbase2020Tests.framework */; };
@@ -153,6 +156,9 @@
 		42F1CE3724FC2F0A001E5F1F /* FactoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryCell.swift; sourceTree = "<group>"; };
 		42F1CE3A24FC2F3F001E5F1F /* SharedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTableViewCell.swift; sourceTree = "<group>"; };
 		42F1CE3C24FC2FC3001E5F1F /* FactoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryService.swift; sourceTree = "<group>"; };
+		42F1CE3E24FC3D54001E5F1F /* FactoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDetailsViewController.swift; sourceTree = "<group>"; };
+		42F1CE4024FC3D9F001E5F1F /* FactoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDetailsViewModel.swift; sourceTree = "<group>"; };
+		42F1CE4224FC3E56001E5F1F /* FactoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryDetailsRouter.swift; sourceTree = "<group>"; };
 		4AC2D7D21D4E587FF9CF4AC8 /* Pods-iosbase2020-iosbase2020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020-iosbase2020UITests.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020-iosbase2020UITests/Pods-iosbase2020-iosbase2020UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52D58DA92FF183B37A675F05 /* Pods-iosbase2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020/Pods-iosbase2020.debug.xcconfig"; sourceTree = "<group>"; };
 		D6ED40A3D21C2B085EBD3541 /* Pods-iosbase2020-iosbase2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020-iosbase2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020-iosbase2020Tests/Pods-iosbase2020-iosbase2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -540,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				42F1CE2724FC1D88001E5F1F /* FactoryRouter.swift */,
+				42F1CE4224FC3E56001E5F1F /* FactoryDetailsRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -548,6 +555,7 @@
 			isa = PBXGroup;
 			children = (
 				42F1CE2524FC1D3D001E5F1F /* FactoryViewModel.swift */,
+				42F1CE4024FC3D9F001E5F1F /* FactoryDetailsViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -556,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				42F1CE2324FC1D00001E5F1F /* FactoryViewController.swift */,
+				42F1CE3E24FC3D54001E5F1F /* FactoryDetailsViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -868,6 +877,7 @@
 				42F1CE0924FC1624001E5F1F /* GetFactoryListCall.swift in Sources */,
 				42F1CDD524FC0FC3001E5F1F /* ProxyCodingError.swift in Sources */,
 				42F1CDD024FC0F82001E5F1F /* KeychainAccessError.swift in Sources */,
+				42F1CE4324FC3E56001E5F1F /* FactoryDetailsRouter.swift in Sources */,
 				42F1CE3D24FC2FC3001E5F1F /* FactoryService.swift in Sources */,
 				42F1CE0124FC1546001E5F1F /* SessionService.swift in Sources */,
 				42F1CDBC24FC0C66001E5F1F /* AppProxyAPIExtension.swift in Sources */,
@@ -876,7 +886,9 @@
 				42F1CDE624FC11EB001E5F1F /* TTextField.swift in Sources */,
 				42F1CDCA24FC0E5D001E5F1F /* AppRouteCreator.swift in Sources */,
 				42F1CE1224FC189B001E5F1F /* CodableUtils.swift in Sources */,
+				42F1CE4124FC3D9F001E5F1F /* FactoryDetailsViewModel.swift in Sources */,
 				42F1CDBE24FC0CDF001E5F1F /* AppProxy.swift in Sources */,
+				42F1CE3F24FC3D54001E5F1F /* FactoryDetailsViewController.swift in Sources */,
 				42F1CD7F24FC0781001E5F1F /* AppDelegate.swift in Sources */,
 				42F1CDE424FC11BD001E5F1F /* TargetTheme.swift in Sources */,
 				42F1CE1024FC17EA001E5F1F /* ResultUtils.swift in Sources */,

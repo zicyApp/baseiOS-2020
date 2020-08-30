@@ -8,12 +8,15 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class FactoryViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: TLabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyText: TLabel!
     
+    private var hud: MBProgressHUD?
     private var viewModel: FactoryViewModel?
     private var refreshControl: UIRefreshControl?
     
@@ -33,7 +36,12 @@ class FactoryViewController: UIViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.addTarget(self, action: #selector(self.refresh), for: .valueChanged)
         
+        self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        self.hud?.mode = MBProgressHUDMode.indeterminate
+        
         self.tableView.delegate = self
+        self.emptyText.isHidden = true
+        self.tableView.isHidden = true
         self.tableView.dataSource = self
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         
@@ -59,12 +67,24 @@ class FactoryViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    private func checkIfEmpty() {
+        if (self.getVM().factories.count > 0) {
+            self.tableView.isHidden = false
+            self.emptyText.isHidden = true
+        } else {
+            self.tableView.isHidden = true
+            self.emptyText.isHidden = false
+        }
+    }
 }
 
 extension FactoryViewController: FactoryViewModelDelegate {
     func onDataLoadSuccess() {
+        self.hud?.hide(animated: true)
         self.refreshControl?.endRefreshing()
         self.tableView.reloadData()
+        self.checkIfEmpty()
     }
     
     func onDataLoadError() {
@@ -89,11 +109,12 @@ extension FactoryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // let factory = self.getVM().factories[indexPath.row]
         return 74
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let factory = self.getVM().factories[indexPath.row]
+        self.getVM().showDetailsView(factory: factory)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath){
