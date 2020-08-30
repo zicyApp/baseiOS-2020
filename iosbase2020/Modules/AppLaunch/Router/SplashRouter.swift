@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 protocol SplashRouterInterface: class {
-    func showHomeView()
+    func showFactoryView()
 }
 
 class SplashRouter: SplashRouterInterface {
     
     private struct Const {
-        static let homeStoryboard = "Home"
+        static let factoryStoryboard = "Factory"
         static let mainNavigationController = "MainNavigationController"
-        static let homeViewController = "HomeViewController"
+        static let factoryViewController = "FactoryViewController"
     }
     
     private weak var presented: UIViewController?
@@ -31,8 +31,16 @@ class SplashRouter: SplashRouterInterface {
         self.activities = activities
     }
     
-    func showHomeView() {
-        
+    func showFactoryView() {
+        let nc: UINavigationController = ControllerUtils.instantiateVC(forSBName: Const.factoryStoryboard, vcId: Const.mainNavigationController)
+        guard let vc = nc.topViewController as? FactoryViewController  else {
+            fatalError("Route error on \(self)")
+        }
+        let router = FactoryRouter(presented: vc, app: self.app, activities: self.activities)
+        let vm = FactoryViewModel(delegate: vc, router: router, app: self.app)
+        vc.set(viewModel: vm)
+        nc.modalPresentationStyle = .fullScreen
+        self.presented?.present(nc, animated: true, completion: nil)
     }
 }
 

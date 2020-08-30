@@ -1,23 +1,24 @@
 //
-//  SplashViewVC.swift
+//  HomeViewController.swift
 //  iosbase2020
 //
 //  Created by Robert Polovitzer on 2020-08-30.
 //  Copyright © 2020 Robert Polovitzer. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class SplashViewController: UIViewController {
+class FactoryViewController: UIViewController {
     
-    private var viewModel: SplashViewModel?
+    private var viewModel: FactoryViewModel?
     
-    private func getVM() -> SplashViewModel {
+    private func getVM() -> FactoryViewModel {
         guard let viewModel = self.viewModel else {fatalError("error!!!")}
         return viewModel
     }
     
-    func set(viewModel: SplashViewModel) {
+    func set(viewModel: FactoryViewModel) {
         self.viewModel = viewModel
     }
     
@@ -35,8 +36,5 @@ class SplashViewController: UIViewController {
     }
 }
 
-extension SplashViewController: SplashViewModelDelegate {
-    func showError(message: String, title: String?) {
-        ControllerUtils.showError(forController: self.presentedViewController ?? self, message: message, title: title)
-    }
+extension FactoryViewController: FactoryViewModelDelegate {
 }

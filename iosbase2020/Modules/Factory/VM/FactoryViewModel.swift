@@ -1,5 +1,5 @@
 //
-//  SplashViewVM.swift
+//  HomeViewModel.swift
 //  iosbase2020
 //
 //  Created by Robert Polovitzer on 2020-08-30.
@@ -8,20 +8,20 @@
 
 import Foundation
 
-protocol SplashViewModelDelegate: class {
-    func showError(message: String, title: String?)
+protocol FactoryViewModelDelegate: class {
+    
 }
 
-class SplashViewModel {
+class FactoryViewModel {
     
-    private let router: SplashRouterInterface
+    private let router: FactoryRouterInterface
     private var firstTimeViewDidAppear = true
     private let app: AppDependencyContainerInterface
     
-    private weak var delegate: SplashViewModelDelegate?
+    private weak var delegate: FactoryViewModelDelegate?
     
-    init(delegate: SplashViewModelDelegate?,
-         router: SplashRouterInterface,
+    init(delegate: FactoryViewModelDelegate?,
+         router: FactoryRouterInterface,
          app: AppDependencyContainerInterface) {
         self.delegate = delegate
         self.router = router
@@ -29,12 +29,9 @@ class SplashViewModel {
     }
     
     func viewDidAppear() {
-        self.checkIfUserLogged()
     }
     
-    private func checkIfUserLogged() {
+    func getFactoryList() {
+        
     }
-}
-
-extension SplashViewModel: SessionServiceDelegate {
 }

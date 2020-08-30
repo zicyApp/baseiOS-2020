@@ -12,8 +12,7 @@ public enum AppActivitiy {
 
 class AppRouteCreator {
     
-    private let activities: [AppActivitiy] = [.session,
-                                              ]
+    private let activities: [AppActivitiy] = [.session]
     
     func createRoute(forApp app: AppDependencyContainerInterface) -> AppRouter {
         return AppRouter(app: app, activities: self.activities)
