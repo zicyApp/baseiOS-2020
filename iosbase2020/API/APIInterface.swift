@@ -8,13 +8,11 @@
 
 import UIKit
 
-// typealias EmptyResultComp = (_ result: Result<EmptyResult>) -> Void
+typealias EmptyResultComp = (_ result: Result<EmptyResult>) -> Void
 typealias FactoryLitsComp = (_ result: Result<GetFactoryListResponse>) -> Void
 
 protocol APIInterface: class {
-    // Account
-    func getFactories(completionCall: @escaping FactoryLitsComp)
-    
+    func getFactories(request: GetFactoryListRequest, completionCall: @escaping FactoryLitsComp)
 }
 
 protocol SessionServiceDelegable {

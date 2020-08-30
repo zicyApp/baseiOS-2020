@@ -55,6 +55,12 @@
 		42F1CE2424FC1D00001E5F1F /* FactoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE2324FC1D00001E5F1F /* FactoryViewController.swift */; };
 		42F1CE2624FC1D3D001E5F1F /* FactoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE2524FC1D3D001E5F1F /* FactoryViewModel.swift */; };
 		42F1CE2824FC1D88001E5F1F /* FactoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE2724FC1D88001E5F1F /* FactoryRouter.swift */; };
+		42F1CE2A24FC275B001E5F1F /* TLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE2924FC275B001E5F1F /* TLabel.swift */; };
+		42F1CE3024FC2AFC001E5F1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42F1CE3224FC2AFC001E5F1F /* Localizable.strings */; };
+		42F1CE3524FC2B94001E5F1F /* i18Interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3424FC2B94001E5F1F /* i18Interface.swift */; };
+		42F1CE3824FC2F0A001E5F1F /* FactoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3724FC2F0A001E5F1F /* FactoryCell.swift */; };
+		42F1CE3B24FC2F3F001E5F1F /* SharedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3A24FC2F3F001E5F1F /* SharedTableViewCell.swift */; };
+		42F1CE3D24FC2FC3001E5F1F /* FactoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1CE3C24FC2FC3001E5F1F /* FactoryService.swift */; };
 		5ED09F9D2A1EBDE019845039 /* Pods_iosbase2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095D667809C5D5AEE8185A01 /* Pods_iosbase2020.framework */; };
 		69D50B8EF79921EC3220D72C /* Pods_iosbase2020_iosbase2020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37656DAA95031EE31BFB1BB1 /* Pods_iosbase2020_iosbase2020UITests.framework */; };
 		9AB7D047A0C3965E66EAB938 /* Pods_iosbase2020_iosbase2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D51258131E972B409F8B457 /* Pods_iosbase2020_iosbase2020Tests.framework */; };
@@ -138,6 +144,15 @@
 		42F1CE2324FC1D00001E5F1F /* FactoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryViewController.swift; sourceTree = "<group>"; };
 		42F1CE2524FC1D3D001E5F1F /* FactoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryViewModel.swift; sourceTree = "<group>"; };
 		42F1CE2724FC1D88001E5F1F /* FactoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryRouter.swift; sourceTree = "<group>"; };
+		42F1CE2924FC275B001E5F1F /* TLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLabel.swift; sourceTree = "<group>"; };
+		42F1CE2B24FC2A4C001E5F1F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		42F1CE2D24FC2A64001E5F1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		42F1CE3124FC2AFC001E5F1F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		42F1CE3324FC2B00001E5F1F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		42F1CE3424FC2B94001E5F1F /* i18Interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i18Interface.swift; sourceTree = "<group>"; };
+		42F1CE3724FC2F0A001E5F1F /* FactoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryCell.swift; sourceTree = "<group>"; };
+		42F1CE3A24FC2F3F001E5F1F /* SharedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTableViewCell.swift; sourceTree = "<group>"; };
+		42F1CE3C24FC2FC3001E5F1F /* FactoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryService.swift; sourceTree = "<group>"; };
 		4AC2D7D21D4E587FF9CF4AC8 /* Pods-iosbase2020-iosbase2020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020-iosbase2020UITests.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020-iosbase2020UITests/Pods-iosbase2020-iosbase2020UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52D58DA92FF183B37A675F05 /* Pods-iosbase2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020/Pods-iosbase2020.debug.xcconfig"; sourceTree = "<group>"; };
 		D6ED40A3D21C2B085EBD3541 /* Pods-iosbase2020-iosbase2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosbase2020-iosbase2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-iosbase2020-iosbase2020Tests/Pods-iosbase2020-iosbase2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				42F1CE0024FC1546001E5F1F /* SessionService.swift */,
+				42F1CE3C24FC2FC3001E5F1F /* FactoryService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -352,6 +368,7 @@
 		42F1CDDC24FC10F6001E5F1F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				42F1CE3924FC2F1F001E5F1F /* Cells */,
 				42F1CE1324FC1BC1001E5F1F /* UI */,
 				42F1CE1424FC1BCE001E5F1F /* VM */,
 				42F1CE1524FC1BD6001E5F1F /* VC */,
@@ -371,6 +388,8 @@
 		42F1CDDE24FC1128001E5F1F /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				42F1CE3224FC2AFC001E5F1F /* Localizable.strings */,
+				42F1CE3424FC2B94001E5F1F /* i18Interface.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -379,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				42F1CDE524FC11EB001E5F1F /* TTextField.swift */,
+				42F1CE2924FC275B001E5F1F /* TLabel.swift */,
 			);
 			path = Themeables;
 			sourceTree = "<group>";
@@ -507,6 +527,7 @@
 		42F1CE1C24FC1CAC001E5F1F /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				42F1CE3624FC2D46001E5F1F /* Cells */,
 				42F1CE2024FC1CC8001E5F1F /* UI */,
 				42F1CE1F24FC1CC2001E5F1F /* VC */,
 				42F1CE1E24FC1CBD001E5F1F /* VM */,
@@ -545,6 +566,22 @@
 				42F1CE2124FC1CDE001E5F1F /* Factory.storyboard */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		42F1CE3624FC2D46001E5F1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				42F1CE3724FC2F0A001E5F1F /* FactoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		42F1CE3924FC2F1F001E5F1F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				42F1CE3A24FC2F3F001E5F1F /* SharedTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CED135C6A5F50374C5C722F8 /* Pods */ = {
@@ -652,6 +689,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"fr-CA",
 			);
 			mainGroup = 42F1CD7224FC0780001E5F1F;
 			productRefGroup = 42F1CD7C24FC0781001E5F1F /* Products */;
@@ -671,6 +709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F1CD8B24FC0781001E5F1F /* LaunchScreen.storyboard in Resources */,
+				42F1CE3024FC2AFC001E5F1F /* Localizable.strings in Resources */,
 				42F1CD8824FC0781001E5F1F /* Assets.xcassets in Resources */,
 				42F1CDFF24FC14AF001E5F1F /* Splash.storyboard in Resources */,
 				42F1CE2224FC1CDE001E5F1F /* Factory.storyboard in Resources */,
@@ -824,10 +863,12 @@
 				42F1CDC624FC0E00001E5F1F /* AppDependencyContainer.swift in Sources */,
 				42F1CE2624FC1D3D001E5F1F /* FactoryViewModel.swift in Sources */,
 				42F1CDD324FC0FA0001E5F1F /* ErrorParser.swift in Sources */,
+				42F1CE3B24FC2F3F001E5F1F /* SharedTableViewCell.swift in Sources */,
 				42F1CDDB24FC1094001E5F1F /* Factory.swift in Sources */,
 				42F1CE0924FC1624001E5F1F /* GetFactoryListCall.swift in Sources */,
 				42F1CDD524FC0FC3001E5F1F /* ProxyCodingError.swift in Sources */,
 				42F1CDD024FC0F82001E5F1F /* KeychainAccessError.swift in Sources */,
+				42F1CE3D24FC2FC3001E5F1F /* FactoryService.swift in Sources */,
 				42F1CE0124FC1546001E5F1F /* SessionService.swift in Sources */,
 				42F1CDBC24FC0C66001E5F1F /* AppProxyAPIExtension.swift in Sources */,
 				42F1CDEE24FC1294001E5F1F /* Variation.swift in Sources */,
@@ -847,6 +888,7 @@
 				42F1CDF724FC139E001E5F1F /* SplashRouter.swift in Sources */,
 				42F1CDCC24FC0E7B001E5F1F /* AppCreator.swift in Sources */,
 				42F1CDD924FC1020001E5F1F /* CoreHelper.swift in Sources */,
+				42F1CE3524FC2B94001E5F1F /* i18Interface.swift in Sources */,
 				42F1CDE124FC1180001E5F1F /* Theme.swift in Sources */,
 				42F1CE0E24FC176D001E5F1F /* Proxy.swift in Sources */,
 				42F1CDD724FC0FE7001E5F1F /* ProxyNetworkError.swift in Sources */,
@@ -854,9 +896,11 @@
 				42F1CDEB24FC125C001E5F1F /* UIApplication+Extensions.swift in Sources */,
 				42F1CDC824FC0E3D001E5F1F /* AppRouter.swift in Sources */,
 				42F1CDC024FC0D15001E5F1F /* AppNetworkingCreator.swift in Sources */,
+				42F1CE2A24FC275B001E5F1F /* TLabel.swift in Sources */,
 				42F1CDF924FC13DF001E5F1F /* SplashViewController.swift in Sources */,
 				42F1CDE924FC122A001E5F1F /* UIColor+Extensions.swift in Sources */,
 				42F1CDCE24FC0F64001E5F1F /* OperationError.swift in Sources */,
+				42F1CE3824FC2F0A001E5F1F /* FactoryCell.swift in Sources */,
 				42F1CDFD24FC1470001E5F1F /* ControllerUtils.swift in Sources */,
 				42F1CDFB24FC1415001E5F1F /* SplashViewModel.swift in Sources */,
 				42F1CDC424FC0D85001E5F1F /* APIInterface.swift in Sources */,
@@ -899,8 +943,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				42F1CD8A24FC0781001E5F1F /* Base */,
+				42F1CE2B24FC2A4C001E5F1F /* fr-CA */,
+				42F1CE2D24FC2A64001E5F1F /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		42F1CE3224FC2AFC001E5F1F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F1CE3124FC2AFC001E5F1F /* en */,
+				42F1CE3324FC2B00001E5F1F /* fr-CA */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -910,6 +965,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -970,6 +1026,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

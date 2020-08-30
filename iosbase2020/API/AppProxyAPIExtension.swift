@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension AppProxy: APIInterface {
-    func getFactories(completionCall: @escaping FactoryLitsComp) {
-        GetFactoryListCall(proxy: self).getFactories(completionCall: completionCall)
+    func getFactories(request: GetFactoryListRequest, completionCall: @escaping FactoryLitsComp) {
+        GetFactoryListCall(proxy: self).getFactories(request: request, completionCall: completionCall)
     }
 }

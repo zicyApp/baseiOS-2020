@@ -9,32 +9,54 @@
 import UIKit
 
 struct ColorTheme {
-    struct Primary {
-        static var tint = UIColor(hex: "273A49")
-        static var title = UIColor(hex: "333333")
-        static var placeholder = UIColor(hex: "f4f4f4")
+    enum Primary: String {
+        case tint
+        case title
+        case headerTitle
+        case placeholder
+        
+        func dynamicColor() -> UIColor {
+            return ColorTheme.getDynamicColor(colorTheme: self.rawValue, primary: true)
+        }
     }
-    struct Secondary {
-        static var tint = UIColor(hex: "006BD7") //blue
+    enum Secondary: String {
+        case tint
+        
+        func dynamicColor() -> UIColor {
+            return ColorTheme.getDynamicColor(colorTheme: self.rawValue, primary: true)
+        }
+    }
+    
+    static func getDynamicColor(colorTheme: String, primary: Bool) -> UIColor {
+        if #available(iOS 13, *) {
+            return UIColor { (traitCollection: UITraitCollection) -> UIColor in
+                switch traitCollection.userInterfaceStyle {
+                case .dark: return TargetTheme.getTargetColor(colorTheme: colorTheme, isLight: false, primary: primary)
+                default: return TargetTheme.getTargetColor(colorTheme: colorTheme, isLight: true, primary: primary)
+                }
+            }
+        } else {
+            return TargetTheme.getTargetColor(colorTheme: colorTheme, isLight: true, primary: primary)
+        }
     }
 }
 
 struct FontTheme {
     // swiftlint:disable force_unwrapping
     static var black: ((CGFloat) -> (UIFont)) = { size in
-        return UIFont(name: "Raleway-Black", size: size)! //fatal, needed
+        return UIFont.systemFont(ofSize: 17) //fatal, needed
     }
     static var bold: ((CGFloat) -> (UIFont)) = { size in
-        return UIFont(name: "Raleway-Bold", size: size)! //fatal, needed
+        return UIFont.boldSystemFont(ofSize: 17) //fatal, needed
     }
     static var medium: ((CGFloat) -> (UIFont)) = { size in
-        return UIFont(name: "Raleway-Medium", size: size)! //fatal, needed
+        return UIFont.systemFont(ofSize: 17) //fatal, needed
     }
     static var regular: ((CGFloat) -> (UIFont)) = { size in
-        return UIFont(name: "Raleway-Regular", size: size)! //fatal, needed
+        return UIFont.systemFont(ofSize: 17) //fatal, needed
     }
     static var light: ((CGFloat) -> (UIFont)) = { size in
-        return UIFont(name: "Raleway-Light", size: size)! //fatal, needed
+        return UIFont.systemFont(ofSize: 17) //fatal, needed
     }
     // swiftlint:enable force_unwrapping
 }

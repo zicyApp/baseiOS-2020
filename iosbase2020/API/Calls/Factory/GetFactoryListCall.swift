@@ -13,7 +13,11 @@ struct GetFactoryListResponse : Codable {
     var count: Int? = nil
     var next: String? = nil
     var previous: String? = nil
-    var result: [Factory]? = nil
+    var results: [Factory]? = nil
+}
+
+struct GetFactoryListRequest {
+    var offset: Int = 0
 }
 
 class GetFactoryListCall {
@@ -24,8 +28,8 @@ class GetFactoryListCall {
         self.proxy = proxy
     }
     
-    func getFactories(completionCall: @escaping FactoryLitsComp) {
-        let opp = GetFactoryLitsOperation(proxy: self.proxy)
+    func getFactories(request: GetFactoryListRequest, completionCall: @escaping FactoryLitsComp) {
+        let opp = GetFactoryLitsOperation(request: request, proxy: self.proxy)
         let completionOpp = CompletionOperation(resultable: opp) { result in
             DispatchQueue.main.async {
                 completionCall(result)
@@ -40,13 +44,15 @@ class GetFactoryListCall {
 
 class GetFactoryLitsOperation: AsyncOperation, ResultProvider {
     
-    init(proxy: AppProxy) {
+    init(request: GetFactoryListRequest, proxy: AppProxy) {
         self.proxy = proxy
+        self.request = request
     }
     
     private var endPoint = AppProxy.EndPoints.Factory.list.rawValue
     var dataResult: Result<GetFactoryListResponse> = .error(error: OperationError.neverStarted)
     private let proxy: AppProxy
+    private let request: GetFactoryListRequest
     
     override func main() {
         /*do {
@@ -62,8 +68,8 @@ class GetFactoryLitsOperation: AsyncOperation, ResultProvider {
     
     private func performCall() {
         let networking = self.proxy.getNetworkingWithAuth()
-        print("post call \(self.endPoint) started")
-        networking.get(self.endPoint) { (result) in
+        print("post call \(self.endPoint + "?offset=\(request.offset)") started")
+        networking.get(self.endPoint + "?offset=\(request.offset)") { (result) in
             print("post call \(self.endPoint) ended")
             print("post call result \(result)")
             switch result {

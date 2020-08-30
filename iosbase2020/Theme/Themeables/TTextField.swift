@@ -28,8 +28,8 @@ enum TextFieldVariation: String, Variation {
     
     static var variations: [TextFieldVariation: VariationBlock] = [
         .primary: { textField in
-            textField.tintColor = ColorTheme.Primary.tint
-            textField.textColor = ColorTheme.Primary.title
+            textField.tintColor = ColorTheme.Primary.tint.dynamicColor()
+            textField.textColor = ColorTheme.Primary.title.dynamicColor()
             if let pointSize = textField.font?.pointSize {
                 textField.font = FontTheme.regular(pointSize)
             }

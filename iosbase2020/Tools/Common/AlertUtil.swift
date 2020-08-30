@@ -13,7 +13,7 @@ open class AlertUtil {
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
-        alertController.view.tintColor = ColorTheme.Primary.tint
+        alertController.view.tintColor = ColorTheme.Primary.tint.dynamicColor()
         if let vc = viewController {
             vc.present(alertController, animated: true, completion: nil)
         } else {
